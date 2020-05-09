@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html, body {
+  font-size: 16px;
+  height: 100%;
+  background-color: #eee;
+  color: #1e1e1e;
+  text-align: center;
+  line-height: 1.8;
+  font-family: 'Open Sans';
+}
+
+.header-img {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.img1 {
+  background-image: url('imgs/city.jpeg');
+  min-height: 100%;
+}
+
+.img2 {
+  background-image: url('imgs/louvre.jpeg');
+  min-height: 500px;
+}
+
+.img3 {
+  background-image: url('imgs/beach.jpeg');
+  min-height: 500px;
+}
+
+.img1 h2 {
+  color: #eee;
+  background: #050505;
+  padding: 2rem;
+
+  border: 3px solid #c4c4c4;
+}
+
+.img1 a {
+  position: absolute;
+  bottom: 0;
+  font-size: 5rem;
+  color: #eee;
+}
+
+.img1 a:hover {
+  bottom: 10px;
+  cursor: pointer;
+  color: #e3e3e3;
+}
+
+.text-container {
+  background: #111440;
+  color: #eee;
+  padding: 3rem 5rem;
+}
+
+.text-container h3 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.text-container p {
+  font-size: 1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #eee;
+}
+
+.contact-form h3 {
+  margin-bottom: 1rem;
+}
+
+.contact-form h4 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+  margin-bottom: 1.4rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+/* #1ECD97 */
+
+.contact-form button {
+  outline: none;
+  background: #1ECD97;
+  height: 50px;
+  width: 120px;
+  border: 3px solid #1ECD97;
+  border-radius: 40px;
+  color: #eee;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button::after {
+  content: 'SUBMIT';
+}
+
+.contact-form button:hover {
+  background: #eee;
+  color: #1ECD97;
+}
+
+.contact-form button.clicked  {
+  width: 50px;
+  background: none;
+  border-color: #eee;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #1ECD97;
+
+  animation: rotating 2s 0.3s linear infinite;
+}
+
+.contact-form button.validated::after{
+  font-family: 'Font Awesome 5 Free';
+  content: '\f00c';
+  font-weight: 900;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
